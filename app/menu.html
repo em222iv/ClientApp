@@ -1,14 +1,43 @@
-<menu data-ng-controller="LoginController as indexauth">
+<menu class="top-bar" data-topbar role="navigation" data-ng-controller="LoginController as indexauth">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="#">My Site</a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
     <div ng-if="indexauth.auth.isLoggedin" >
-        <a href="http://localhost:63343/ClientApp/app/index.html#/creators">creators</a>
+        <section class="top-bar-section">
+        <ul class="left">
+            <li class="">
+            <a href="http://localhost:63343/ClientApp/app/index.html#/creators">creators</a>
+            </li>
+            <li>
         <a href="http://localhost:63343/ClientApp/app/index.html#/tags">tags</a>
+            </li>
+            <li>
         <a href="http://localhost:63343/ClientApp/app/index.html#/events">events</a>
+            </li>
+            <li>
         <a href="http://localhost:63343/ClientApp/app/index.html#/create">create event</a>
+            </li>
+            <li>
         <input ng-model="search" type="text" class="form-controll" placeholder="Sök på event">
+            </li>
+            <li>
         <a href="http://localhost:63343/ClientApp/app/index.html#/search/{{search}}">sök</a>
+            </li>
+            <li>
         <a ng-href="http://localhost:63343/ClientApp/app/index.html#/creator-events/{{indexauth.auth.user.id}}" >You are logged in as {{indexauth.auth.user.creator}}</a>
+            </li>
+            <li>
         <a href="http://localhost:63343/ClientApp/app/index.html#/login" type="submit">logga ut</a>
+            </li>
+
+        </ul>
+        </section>
     </div>
+
     <div ng-if="!indexauth.auth.isLoggedin" >
         <a href="http://localhost:63343/ClientApp/app/index.html#/login" type="submit">logga in</a>
     </div>

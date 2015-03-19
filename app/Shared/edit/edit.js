@@ -16,7 +16,7 @@ angular.module('myApp.edit', ['ngRoute','service'])
             vm.long = vm.events.position.long;
 
             map.panTo(latLng);
-            map.setZoom(7);
+            map.setZoom(10);
 
         }).error(function (loginToken){
             console.log('fail');
