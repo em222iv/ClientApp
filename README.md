@@ -9,3 +9,5 @@ Jag har bara testat i webstorm. Det bör bara vara att ladda hem och projektet o
 Efter att ha kört igång rails och seedat så bör du kunna logga in med användaren: "testare", lösenord: "password"
 i angularapplikation
 </p>
+
+<a href="https://github.com/em222iv/rails">Länk till rails app: </a>
