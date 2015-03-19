@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>creators</h3>
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+            <ul>
+                <li ng-repeat="item in ctrl.creators">
+                    <div>
+                        <p> skapare: {{item.id}}</p>
+                        <p> namn: {{item.creator}}</p>
+                        <a ng-href="http://localhost:63343/ClientApp/app/index.html#/creator-events/{{item.id}}">Skapade events</a>
+                    </div>
+                </li>
+            </ul>
+            </thead>
+        </table>
+    </div>
+
+</div>

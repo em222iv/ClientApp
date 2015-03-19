@@ -1,0 +1,15 @@
+<menu data-ng-controller="LoginController as indexauth">
+    <div ng-if="indexauth.auth.isLoggedin" >
+        <a href="http://localhost:63343/ClientApp/app/index.html#/creators">creators</a>
+        <a href="http://localhost:63343/ClientApp/app/index.html#/tags">tags</a>
+        <a href="http://localhost:63343/ClientApp/app/index.html#/events">events</a>
+        <a href="http://localhost:63343/ClientApp/app/index.html#/create">create event</a>
+        <input ng-model="search" type="text" class="form-controll" placeholder="Sök på event">
+        <a href="http://localhost:63343/ClientApp/app/index.html#/search/{{search}}">sök</a>
+        <a ng-href="http://localhost:63343/ClientApp/app/index.html#/creator-events/{{indexauth.auth.user.id}}" >You are logged in as {{indexauth.auth.user.creator}}</a>
+        <a href="http://localhost:63343/ClientApp/app/index.html#/login" type="submit">logga ut</a>
+    </div>
+    <div ng-if="!indexauth.auth.isLoggedin" >
+        <a href="http://localhost:63343/ClientApp/app/index.html#/login" type="submit">logga in</a>
+    </div>
+</menu>

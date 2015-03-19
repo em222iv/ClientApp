@@ -1,0 +1,25 @@
+<div class="col-md-4" data-ng-controller="LoginController as auth">
+    <div ng-if="!auth.auth.isLoggedin" >
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Logga in</h3>
+            </div>
+            <div class="panel-body">
+                <form>
+                    User: <br />
+                    <input type="text" ng-model="auth.creator"/><br />
+                    Password: <br />
+                    <input type="password" ng-model="auth.password"/>
+                    <button data-ng-click="auth.login()">Logga in</button>
+                </form>
+                <p>{{auth.token}}</p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="auth.auth.isLoggedin" >
+        <form>
+            <button data-ng-click="auth.logout()">Logga ut</button>
+        </form>
+
+    </div>
+</div>

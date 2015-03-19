@@ -1,0 +1,18 @@
+<div class="container">
+    <h3>search</h3>
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+            <ul>
+                <li ng-repeat="item in ctrl.result">
+                    <div>
+                        <p> skapare: {{item.creator.creator}}</p>
+                        <p> beskrivning: {{item.description}}</p>
+                        <a ng-href="http://localhost:63343/ClientApp/app/index.html#/event/{{item.id}}">edit events</a>
+                    </div>
+                </li>
+            </ul>
+            </thead>
+        </table>
+    </div>
+</div>
