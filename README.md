@@ -10,4 +10,4 @@ Efter att ha kört igång rails och seedat så bör du kunna logga in med använ
 i angularapplikation
 </p>
 
-<a href="https://github.com/em222iv/rails">Länk till rails app </a>
+<a href="https://github.com/em222iv/API_app">Länk till rails app </a>
