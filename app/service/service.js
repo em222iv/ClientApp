@@ -1,5 +1,5 @@
 'use strict'
-var auth = "2d089585b7c7899183454876f2d12f1d6531ad58"
+var auth = "d3f2733906e64031d9d7b9a4a2fcaf7db6b62478"
 angular.module('service', [])
     .service('login', ['$http' , function($http){
         this.getLogin = function(user) {
@@ -72,10 +72,10 @@ angular.module('service', [])
             return $http(request);
         }
     }
-]).service('tags', ['$http' , function($http){
-        this.getTags = function() {
+]).service('eventByTag', ['$http' , function($http){
+        this.getEventsByTag = function(id) {
             var request = {
-                url: "http://localhost:3000/api/tag.json",
+                url: "http://localhost:3000/api/tag/"+id+".json",
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -86,10 +86,10 @@ angular.module('service', [])
             return $http(request);
         }
     }
-    ]).service('tag', ['$http' , function($http){
-        this.getTag = function(id) {
+    ]).service('tags', ['$http' , function($http){
+        this.getTags = function() {
             var request = {
-                url: "http://localhost:3000/api/tag/"+id+".json",
+                url: "http://localhost:3000/api/tag.json",
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",

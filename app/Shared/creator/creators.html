@@ -1,13 +1,12 @@
 <div class="container">
-    <h3>creators</h3>
+    <h3>Medlemmar</h3>
     <div class="col-md-6">
         <table class="table">
             <thead>
             <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                 <li id="ul" ng-repeat="item in ctrl.creators">
                     <div>
-                        <p> skapare: {{item.id}}</p>
-                        <p> namn: {{item.creator}}</p>
+                        <p> Medlem: {{item.creator}}</p>
                         <a ng-href="http://localhost:63343/ClientApp/app/index.html#/creator-events/{{item.id}}">Skapade events</a>
                     </div>
                 </li>

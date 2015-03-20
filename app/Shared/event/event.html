@@ -1,13 +1,13 @@
 <div class="container">
-    <h3>events</h3>
+    <h3>Badplatser</h3>
     <div class="col-md-6">
         <table class="table">
             <thead>
             <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                     <li id="ul" ng-repeat="item in ctrl.events">
                         <div>
-                            <p> skapare: {{item.creator.creator}}</p>
-                            <p>beskrivning: {{item.description}}</p>
+                            <p> Medlem: {{item.creator.creator}}</p>
+                            <p>beskrivning av badplats: {{item.description}}</p>
                             <a ng-href="http://localhost:63343/ClientApp/app/index.html#/event/{{item.id}}">edit events</a>
                         </div>
                     </li>

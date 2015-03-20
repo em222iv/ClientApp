@@ -8,6 +8,7 @@ var myApp = angular.module('myApp', [
     'myApp.tags',
     'myApp.search',
     'myApp.edit',
+    'myApp.EventByTag',
     'myApp.create'
 ])
 .config(['$routeProvider', function($routeProvider) {
@@ -33,8 +34,8 @@ var myApp = angular.module('myApp', [
             controllerAs: 'ctrl' // players could be seen as an instance of the controller, use it in the view!
         }).
         when('/tag/:id', {
-            templateUrl: 'shared/tag/tags.html',
-            controller: 'getTag',
+            templateUrl: 'shared/EventyByTag/EventByTag.html',
+            controller: 'getEventByTag',
             controllerAs: 'ctrl'
         }).
         when('/creators', {
