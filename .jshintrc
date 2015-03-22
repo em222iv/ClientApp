@@ -1,4 +1,4 @@
-/*
+
 {
   "globalstrict": true,
   "globals": {
@@ -11,4 +11,4 @@
     "module": false,
     "inject": false
   }
-}*/
+}

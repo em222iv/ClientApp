@@ -19,10 +19,9 @@
 <h3>angular</h3>
 
 <p>ladda hem applikationen och öppna den i webstorm.</p>
-<p>För mig har node och bower strulat, så jag har pushat upp dem i repropt. vill man så är det fritt fram att ta bort dessa mappar(node_modles och bowr_components) och installera dem sjäv.
-</p>
+<p>-installera node och bower med: npm install node.js, och sedan npm install bower</p>
+<p>ingen nodeserver behövs startas</p>
 
-<p>-npm install node.js, och sedan npm install bower</p>
-
-
+<p>Öppna servicefilen(~/app/service/serivce.js) och skriv in nyckeln du tagit av valfri user till varibalen "auth" som ligger högst upp.</p>
+<p> öppna nu index-filen och logga in med någon av test-användarna i appliaktion<p/>
 
