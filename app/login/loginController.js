@@ -37,26 +37,4 @@ angular.module('myApp.login', ['ngRoute','service'])
 
         });
     }
-}]);/*.factory('factory', [function(){
-
-
-        return {
-            logout: function () {
-                sessionStorage.setItem('user', JSON.stringify(vm.user));
-                sessionStorage.setItem('state', JSON.stringify(auth.isLoggedin));
-                return false;
-            },
-            login: function () {
-                return {
-                    id: null,
-                    creator: "Tony Casper",//vm.creator,
-                    password: "password",//vm.password,
-                    token: ""
-                }
-
-            }
-        }
-
-    }]);
-
-*/
+}]);

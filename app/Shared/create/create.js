@@ -13,8 +13,6 @@ angular.module('myApp.create', ['ngRoute','service'])
             vm.lat = event.latLng.k.toString().slice(0,10);
             vm.long = event.latLng.D.toString().slice(0,10);
             console.log(vm.lat, vm.long)
-           // document.getElementById('lat').value=event.latLng.k.toString().slice(0,7);
-            //document.getElementById('long').value=event.latLng.D.toString().slice(0,7);
         });
         vm.createEvent = function() {
             vm.event = {
