@@ -44,17 +44,21 @@ angular.module('myApp.edit', ['ngRoute','service'])
                     long:parseFloat(vm.long)
                 }
             }
+            if(vm.event.event.description === ""){
+                vm.result = 'describe the event';
+                return;
+            }
+            if(isNaN(vm.event.position.lat)){
+                vm.result = 'Choose a position on the map';
+                return;
+            }
             console.log(vm.event);
             console.log(JSON.parse(sessionStorage.getItem('user')));
 
             editService.editEvent(routeParams.id,vm.event).success(function (response){
-                vm.result = response;
-                console.log(response);
-
+                vm.result = response.message;
             }).error(function (response){
-                vm.result = 'Eventet har inte uppdaterats. Du har inte rättigheter att editera'
-
-
+                vm.result = 'The event has not been edited. You only have permission to edit your own events';
             });
         }
     }]);

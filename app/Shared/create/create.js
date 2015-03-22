@@ -15,6 +15,7 @@ angular.module('myApp.create', ['ngRoute','service'])
             console.log(vm.lat, vm.long)
         });
         vm.createEvent = function() {
+
             vm.event = {
                 event: {
                     creator_id: JSON.parse(sessionStorage.getItem('user')).id,
@@ -28,10 +29,23 @@ angular.module('myApp.create', ['ngRoute','service'])
                     long:parseFloat(vm.long)
                 }
             }
+            if(vm.event.event.description == undefined){
+                vm.result = 'describe the event';
+                return;
+            }
+            if(vm.event.tag.tag == undefined){
+                vm.result = 'describe the type of event';
+                return;
+            }
+
+            if(isNaN(vm.event.position.lat)){
+                vm.result = 'Choose a position on the map';
+                return;
+            }
             console.log(vm.event);
             console.log(JSON.parse(sessionStorage.getItem('user')));
             loginService.createEvent(vm.event).success(function (response){
-                vm.result = response;
+                vm.result = response.message;
                console.log(response);
             }).error(function (response){
                 vm.result = response.message;
