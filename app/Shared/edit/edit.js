@@ -38,7 +38,6 @@ angular.module('myApp.edit', ['ngRoute','service'])
                     creator_id: JSON.parse(sessionStorage.getItem('user')).id,
                     description: vm.description
                 },
-
                 position: {
                     lat:parseFloat(vm.lat),
                     long:parseFloat(vm.long)

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp.create', ['ngRoute','service'])
-    .controller('createController', ['createEvent', function(loginService) {
+    .controller('createController', ['createEvent','$scope','$location', function(loginService,$scope,$location) {
         var vm = this;
         vm.event = {};
         //upprepad kod. även i edit. var tvungen att lägga eventlistenern i modulen för att hitta scopet
@@ -14,6 +14,7 @@ angular.module('myApp.create', ['ngRoute','service'])
             vm.long = event.latLng.D.toString().slice(0,10);
             console.log(vm.lat, vm.long)
         });
+
         vm.createEvent = function() {
 
             vm.event = {
@@ -45,8 +46,12 @@ angular.module('myApp.create', ['ngRoute','service'])
             console.log(vm.event);
             console.log(JSON.parse(sessionStorage.getItem('user')));
             loginService.createEvent(vm.event).success(function (response){
+                console.log($scope,$location);
                 vm.result = response.message;
-               console.log(response);
+                console.log('/ClientApp/app/index.html#/creator-events/'+JSON.parse(sessionStorage.getItem('user')).id);
+               // $location.path('/ClientApp/app/index.html#/creator-events/'+JSON.parse(sessionStorage.getItem('user')).id);
+                $location.path('/creator-events/'+JSON.parse(sessionStorage.getItem('user')).id);
+
             }).error(function (response){
                 vm.result = response.message;
 
